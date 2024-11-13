@@ -26,7 +26,7 @@
                         <child>
                             <object class="AdwBanner">
                                 <property name="revealed">True</property>
-                                <property name="title">Открывать ссылки в FlexLaunch по умолчанию</property>
+                                <property name="title" translatable="yes">Open links in FlexLaunch by default</property>
                                 <property name="button-label">Установить</property>
                             </object>
                         </child>

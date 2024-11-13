@@ -1,0 +1,3 @@
+#: src/window.ui:29
+msgid "Open links in FlexLaunch by default"
+msgstr "Открывать ссылки в FlexLaunch по умолчанию"
