@@ -1,0 +1,6 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/io.github.shvargon.flexlaunch.desktop.in
+data/io.github.shvargon.flexlaunch.metainfo.xml.in
+data/io.github.shvargon.flexlaunch.gschema.xml
+src/window.ui

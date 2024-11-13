@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=io.github.shvargon.flexlaunch
+Exec=@bindir@/flexlaunch --gapplication-service
