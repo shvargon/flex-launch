@@ -1,55 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk" version="4.0"/>
-  <requires lib="Adw" version="1.0"/>
-  <template class="FlexlaunchWindow" parent="AdwApplicationWindow">
-    <property name="title" translatable="yes">Flexlaunch</property>
-    <property name="default-width">800</property>
-    <property name="default-height">600</property>
-    <property name="content">
-      <object class="AdwToolbarView">
-        <child type="top">
-          <object class="AdwHeaderBar">
-            <child type="end">
-              <object class="GtkMenuButton">
-                <property name="primary">True</property>
-                <property name="icon-name">open-menu-symbolic</property>
-                <property name="tooltip-text" translatable="yes">Main Menu</property>
-                <property name="menu-model">primary_menu</property>
-              </object>
-            </child>
-          </object>
-        </child>
+    <requires lib="gtk" version="4.0"/>
+    <requires lib="Adw" version="1.0"/>
+    <template class="FlexlaunchWindow" parent="AdwApplicationWindow">
+        <property name="title" translatable="yes">Flexlaunch</property>
+        <property name="default-width">800</property>
+        <property name="default-height">600</property>
         <property name="content">
-            <object class="GtkBox">
-                <property name="orientation">vertical</property>
-                <child>
-                    <object class="GtkLabel" id="label">
-                        <property name="label" translatable="yes">Hello, World!</property>
-                        <style>
-                            <class name="title-1"/>
-                        </style>
+            <object class="AdwToolbarView">
+                <child type="top">
+                    <object class="AdwHeaderBar">
+                        <child type="end">
+                            <object class="GtkMenuButton">
+                                <property name="primary">True</property>
+                                <property name="icon-name">open-menu-symbolic</property>
+                                <property name="tooltip-text" translatable="yes">Main Menu</property>
+                                <property name="menu-model">primary_menu</property>
+                            </object>
+                        </child>
                     </object>
                 </child>
+                <property name="content">
+                    <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <child>
+                            <object class="AdwBanner">
+                                <property name="revealed">True</property>
+                                <property name="title">Открывать ссылки в FlexLaunch по умолчанию</property>
+                                <property name="button-label">Установить</property>
+                            </object>
+                        </child>
+                        <child>
+                            <object class="GtkLabel" id="label">
+                                <property name="label" translatable="yes">Hello, World!</property>
+                                <style>
+                                    <class name="title-1"/>
+                                </style>
+                            </object>
+                        </child>
+                    </object>
+                </property>
             </object>
         </property>
-      </object>
-    </property>
-  </template>
-  <menu id="primary_menu">
-    <section>
-      <item>
-        <attribute name="label" translatable="yes">_Preferences</attribute>
-        <attribute name="action">app.preferences</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
-        <attribute name="action">win.show-help-overlay</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">_About Flexlaunch</attribute>
-        <attribute name="action">app.about</attribute>
-      </item>
-    </section>
-  </menu>
+    </template>
+    <menu id="primary_menu">
+        <section>
+            <item>
+                <attribute name="label" translatable="yes">_Preferences</attribute>
+                <attribute name="action">app.preferences</attribute>
+            </item>
+            <item>
+                <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+                <attribute name="action">win.show-help-overlay</attribute>
+            </item>
+            <item>
+                <attribute name="label" translatable="yes">_About Flexlaunch</attribute>
+                <attribute name="action">app.about</attribute>
+            </item>
+        </section>
+    </menu>
 </interface>
