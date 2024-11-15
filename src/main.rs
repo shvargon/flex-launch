@@ -5,6 +5,7 @@ mod launch_window;
 
 use self::application::FlexlaunchApplication;
 use self::window::FlexlaunchWindow;
+use self::launch_window::LaunchWindow;
 
 use config::{GETTEXT_PACKAGE, LOCALEDIR, PKGDATADIR};
 use gettextrs::{bind_textdomain_codeset, bindtextdomain, textdomain};

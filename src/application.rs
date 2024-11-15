@@ -4,11 +4,10 @@ use adw::subclass::prelude::*;
 use gtk::{gio, glib};
 
 use crate::config::VERSION;
-use crate::FlexlaunchWindow;
+use crate::{FlexlaunchWindow, LaunchWindow};
 
 mod imp {
     use adw::gio::File;
-    use crate::launch_window::LaunchWindow;
     use super::*;
 
     #[derive(Debug, Default)]
