@@ -1,0 +1,11 @@
+[default]
+name=Default
+runtime=noop
+toolchain=default
+config-opts=
+run-opts=
+prefix=/home/shvargon/Projects/.gnome-builder/projects/flexlaunch/install/noop
+app-id=
+postbuild=
+prebuild=
+run-command=
