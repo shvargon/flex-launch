@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=flexlaunch
-Exec=flexlaunch
+Exec=flexlaunch %U
+MimeType=x-scheme-handler/https;x-scheme-handler/http
 Icon=io.github.shvargon.flexlaunch
 Terminal=false
 Type=Application
