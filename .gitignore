@@ -2,3 +2,4 @@
 /.idea
 .buildconfig
 .flatpak-builder
+/build-dir
