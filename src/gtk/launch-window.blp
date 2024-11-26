@@ -6,9 +6,9 @@ template $LaunchWindow: Adw.ApplicationWindow {
   default-width: 800;
   default-height: 600;
 
-  content: Box {
-    orientation: vertical;
+  content: Adw.ToolbarView toolbar_view {
 
+    [top]
     Box {
       Box {
         hexpand: true;
@@ -37,6 +37,29 @@ template $LaunchWindow: Adw.ApplicationWindow {
       WindowControls {
         decoration-layout: "menu:close";
         side: end;
+      }
+    }
+
+    content: WindowHandle {
+      ScrolledWindow {
+        vexpand: true;
+
+        FlowBox list {
+          halign: center;
+          valign: center;
+          max-children-per-line: 5;
+          min-children-per-line: 2;
+          homogeneous: true;
+
+          styles [
+            "list"
+          ]
+
+          column-spacing: 12;
+          row-spacing: 12;
+          selection-mode: none;
+          activate-on-single-click: true;
+        }
       }
     }
   };
