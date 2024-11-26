@@ -57,7 +57,7 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "file:///home/shvargon/Projects"
+                    "url" : "file:///home/shvargon/Projects/flex-launch/"
                 }
             ],
             "config-opts" : [
