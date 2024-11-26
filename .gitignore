@@ -1,5 +1,6 @@
 /target
 /.idea
 .buildconfig
-.flatpak-builder
-/build-dir
+# ignore subprojects meson
+/subprojects/blueprint-compiler
+/subprojects/blueprint-compiler/.meson-subproject-wrap-hash.txt
