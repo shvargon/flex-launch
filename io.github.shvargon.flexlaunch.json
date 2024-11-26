@@ -7,6 +7,7 @@
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
     "command" : "flexlaunch",
+    "x-run-args": ["https://github.com"],
     "finish-args" : [
         "--share=network",
         "--share=ipc",
