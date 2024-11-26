@@ -36,18 +36,20 @@
         "*.a"
     ],
     "modules" : [
-    	{
-	  "name": "blueprint-compiler",
-	  "buildsystem": "meson",
-	  "cleanup": ["*"],
-	  "sources": [
-	    {
-	      "type": "git",
-	      "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-	      "tag": "v0.14.0"
-	    }
-	  ]
-	},
+        {
+            "name" : "blueprint-compiler",
+            "buildsystem" : "meson",
+            "cleanup" : [
+                "*"
+            ],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/jwestman/blueprint-compiler",
+                    "tag" : "v0.14.0"
+                }
+            ]
+        },
         {
             "name" : "flexlaunch",
             "builddir" : true,
@@ -57,6 +59,9 @@
                     "type" : "git",
                     "url" : "file:///home/shvargon/Projects"
                 }
+            ],
+            "config-opts" : [
+                "--libdir=lib"
             ]
         }
     ]

@@ -1,13 +1,16 @@
 use gtk::prelude::*;
 use adw::subclass::prelude::*;
-use gtk::{gio, glib};
+use gtk::{gio, glib, FlowBox};
 
 mod imp {
     use super::*;
 
     #[derive(Debug, Default, gtk::CompositeTemplate)]
     #[template(resource = "/io/github/shvargon/flexlaunch/launch-window.ui")]
-    pub struct LaunchWindow {}
+    pub struct LaunchWindow {
+        #[template_child]
+        pub applist: TemplateChild<FlowBox>,
+    }
 
     #[glib::object_subclass]
     impl ObjectSubclass for LaunchWindow {
@@ -40,8 +43,20 @@ glib::wrapper! {
 impl LaunchWindow {
     pub fn new<P: IsA<gtk::Application>>(application: &P, file: &gio::File) -> Self {
         dbg!(file);
-        glib::Object::builder()
+        let window: LaunchWindow = glib::Object::builder()
             .property("application", application)
-            .build()
+            .build();
+
+        let applist = window.imp().applist.get();
+
+        // Пример: добавление кнопок в FlowBox
+        for i in 0..10 {
+            let button = gtk::Button::builder()
+                .label(&format!("Item {}", i + 1))
+                .build();
+            applist.append(&button);
+        }
+
+        window
     }
 }
