@@ -1,0 +1,58 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $FlexlaunchWindow: Adw.ApplicationWindow {
+  title: _("Flexlaunch");
+  default-width: 800;
+  default-height: 600;
+
+  content: Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {
+      [end]
+      MenuButton {
+        primary: true;
+        icon-name: "open-menu-symbolic";
+        tooltip-text: _("Main Menu");
+        menu-model: primary_menu;
+      }
+    }
+
+    content: Box {
+      orientation: vertical;
+
+      Adw.Banner {
+        revealed: true;
+        title: _("Open links in FlexLaunch by default");
+        button-label: "Установить";
+      }
+
+      Label label {
+        label: _("Hello, World!");
+
+        styles [
+          "title-1",
+        ]
+      }
+    };
+  };
+}
+
+menu primary_menu {
+  section {
+    item {
+      label: _("_Preferences");
+      action: "app.preferences";
+    }
+
+    item {
+      label: _("_Keyboard Shortcuts");
+      action: "win.show-help-overlay";
+    }
+
+    item {
+      label: _("_About Flexlaunch");
+      action: "app.about";
+    }
+  }
+}

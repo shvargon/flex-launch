@@ -1,0 +1,43 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $LaunchWindow: Adw.ApplicationWindow {
+  title: _("Launch");
+  default-width: 800;
+  default-height: 600;
+
+  content: Box {
+    orientation: vertical;
+
+    Box {
+      Box {
+        hexpand: true;
+
+        Text {
+          hexpand: true;
+        }
+
+        Button {
+          css-classes: [
+            "image-button"
+          ];
+
+          icon-name: "edit-copy-symbolic";
+        }
+
+        Button {
+          css-classes: [
+            "image-button"
+          ];
+
+          icon-name: "qr-code-symbolic";
+        }
+      }
+
+      WindowControls {
+        decoration-layout: "menu:close";
+        side: end;
+      }
+    }
+  };
+}

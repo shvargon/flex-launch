@@ -48,7 +48,7 @@ mod imp {
                 let window = FlexlaunchWindow::new(&*application);
                 window.upcast()
             });
-            self.request_background();
+            // self.request_background();
 
             window.present();
         }
